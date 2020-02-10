@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  border: 1px solid silver;
+}
+body {
+  display: flex;
+  min-height: 50vh;
+  flex-direction: column;
+  margin: 0;
+}
+#main {
+  display: flex;
+  flex: 1;
+}
+/* #main > article {
+  flex: 1;
+} */
+#main > nav {
+  flex: 0 0 10vw;
+  background: beige;
+}
+#main > nav {
+  order: -1;
+}
+
+header {
+    display: flex
+}
+header, footer {
+  background: yellowgreen;
+  height: 10vh;
+}
+header, footer, .stories, nav, aside {
+  padding: 1em;
+}

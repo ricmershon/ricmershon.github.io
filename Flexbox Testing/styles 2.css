@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  border: 1px solid silver;
+}
+body {
+  display: flex;
+  min-height: 50vh;
+  flex-direction: column;
+  margin: 0;
+}
+#main {
+  display: flex;
+  flex: 1;
+}
+/* #main > article {
+  flex: 1;
+} */
+#main > nav {
+  flex: 0 0 5vw;
+  background: beige;
+}
+#main > nav {
+  order: -1;
+}
+
+.story {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.headline {
+    width: 75%;
+}
+
+.picture {
+    width: 25%;
+}
+
+.summary, .link {
+    width: 100%;
+}
+
+header {
+    display: flex;
+}
+header, footer {
+  background: forestgreen;
+  height: 4vh;
+}
+header, footer, .story, nav, aside {
+  padding: 1em;
+}
