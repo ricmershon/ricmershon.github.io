@@ -1,7 +1,9 @@
 * {
   box-sizing: border-box;
-  border: 1px solid silver;
+  /* border: 1px solid silver; */
 }
+
+/* Body defined as a flexbox with arial as the common font family */
 
 body {
   display: flex;
@@ -11,102 +13,13 @@ body {
   font-family: arial; sans-serif;
 }
 
-#main {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-}
-
-#main > .side-nav {
-  flex: 0 0 20vw;
-  order: -1;
-}
-
-.side-nav-item {
-    padding: 1.5em 0;
-    font-size: 10px;
-    color: #599334;
-}
-
-#story-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-footer > a {
-    font-size: 10px;
-    color: white;
-    text-decoration: none;
-}
-
-.top-nav:hover {
-    color: #599334;
-    background: lightgray;
-    cursor: pointer;
-}
-
-button {
-    background: none;
-    border: none;
-    color: white;
-}
-
-
-
-.story {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 90%;
-    justify-content: flex-start;
-    height: 200px;
-    /* border-bottom: 1px solid silver; */
-    /* border-width: 10%; */
-}
-
-.headline {
-    width: 75%;
-}
-.picture {
-    width: 25%;
-}
-
-.summary, .link {
-    width: 100%;
-}
-.side-nav-item:hover {
-    color: white;
-    background: lightgray;
-    cursor: pointer;
-}
+/* Header components */
 
 header {
     display: flex;
-    vertical-align: middle;
+    padding: .5em;
 }
 
-header, footer {
-  background: #599334;
-  height: auto;
-  text-decoration: none;
-  color: white;
-}
-
-.side-nav {
-    border-right: 1px solid silver;
-}
-
-footer:  {
-    font-size: 10px;
-}
-header, footer, .story, .side-nav {
-  padding: 1em;
-}
-
-.top-nav {
-    padding: 5px;
-}
 #header-left {
     padding: 5px;
     font-size: 15px;
@@ -123,4 +36,115 @@ header, footer, .story, .side-nav {
     display: flex;
     text-align: center;
     justify-content: space-between;
+}
+
+.header-menu {
+    padding: 5px;
+}
+
+.header-menu:hover {
+    color: #636363;
+    background: white;
+    cursor: pointer;
+}
+
+/* The main part of the display holds the container for individual stories and the side menu bar */
+
+#main {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+header, footer {
+  background: #636363;
+  height: auto;
+  text-decoration: none;
+  color: white;
+}
+
+/* Side menu controls */
+
+.side-menu {
+    flex: 0 0 20vw;
+    order: -1;
+    border-right: 1px solid #636363;
+    color: #636363;
+}
+
+.side-menu-item {
+    padding: 1.5em 1em;
+    font-size: 10px;
+    color: #636363;
+}
+
+.side-menu-item:hover {
+    color: white;
+    background: #636363;
+    cursor: pointer;
+}
+
+/* One container to hold all stories */
+
+#story-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 100%;
+    margin-left: 25px;
+}
+
+/* A single flexbox for each story */
+
+.story {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    font-size: 15px;
+    width: 95%;
+    min-height: 200px;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.story:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.headline {
+    width: 70%;
+    margin-left: 10px;
+}
+
+.picture {
+    width: 25%;
+}
+
+.summary, .source {
+    width: 100%;
+}
+
+.summary, .picture, .source {
+    margin: 5px;
+}
+
+/* Miscellaneous stuff */
+
+footer:  {
+    font-size: 10px;
+}
+
+ footer, .story, .side-menu {
+  padding: 1em;
+}
+
+footer > a {
+    font-size: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 15px;
 }

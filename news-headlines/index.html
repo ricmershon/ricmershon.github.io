@@ -3,6 +3,11 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="styles.css">
+        <script
+          src="https://code.jquery.com/jquery-3.4.1.min.js"
+          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+          crossorigin="anonymous"></script>
+        <script type="text/javascript" src='app.js'></script>
         <title></title>
     </head>
     <body>
@@ -10,150 +15,49 @@
         <header>
 
             <div id="header-left">
-
                 <div id="app-title">
                     HEADLINES - THE AMERICAS
                 </div>
-
             </div>
-
             <div id="header-right">
-
-                <a class="top-nav" id=us>
+                <a class="header-menu" id=us>
                     UNITED STATES
                 </a>
-
-                <div class="top-nav" id=mx>
+                <div class="header-menu" id=ca>
                     CANADA
                 </div>
-
-                <div class="top-nav" id=ca>
+                <div class="header-menu" id=mx>
                     MEXICO
                 </div>
-
             </div>
 
         </header>
+
         <div id="main">
-
-            <div id="story-container">
-
-
-                <div class=story>
-
-                    <div class="picture">
-                        picture
-                    </div>
-
-                    <div class="headline">
-                        this is a headline.
-                    </div>
-
-                    <div class="summary">
-                        summary
-                    </div>
-
-                    <div class="link">
-                        link
-                    </div>
-
-                </div>
-
-                <div class=story>
-
-                    <div class="picture">
-                        picture
-                    </div>
-
-                    <div class="headline">
-                        this is a headline.
-                    </div>
-
-                    <div class="summary">
-                        summary
-                    </div>
-
-                    <div class="link">
-                        link
-                    </div>
-
-                </div>
-
-                <div class=story>
-
-                    <div class="picture">
-                        picture
-                    </div>
-
-                    <div class="headline">
-                        this is a headline.
-                    </div>
-
-                    <div class="summary">
-                        summary
-                    </div>
-
-                    <div class="link">
-                        link
-                    </div>
-
-                </div>
-
-                <div class=story>
-
-                    <div class="picture">
-                        picture
-                    </div>
-
-                    <div class="headline">
-                        this is a headline.
-                    </div>
-
-                    <div class="summary">
-                        summary
-                    </div>
-
-                    <div class="link">
-                        link
-                    </div>
-
-                </div>
-
-
-
-            </div>
-
-            <div class=side-nav>
-                SEARCH THE US
-                <div class="side-nav-item" id='business'>
+            <div id="story-container"></div>
+            <div class=side-menu>
+                <h2>SEARCH THE US</h2>
+                <div class="side-menu-item" id='business'>
                     BUSINESS
                 </div>
-
-                <div class="side-nav-item" id='entertainment'>
+                <div class="side-menu-item" id='entertainment'>
                     ENTERTAINMENT
                 </div>
-
-                <div class="side-nav-item" id='health'>
+                <div class="side-menu-item" id='health'>
                     HEALTH
                 </div>
-
-                <div class="side-nav-item" id='science'>
+                <div class="side-menu-item" id='science'>
                     SCIENCE
                 </div>
-
-                <div class="side-nav-item" id='sports'>
+                <div class="side-menu-item" id='sports'>
                     SPORTS
                 </div>
-
-                <div class="side-nav-item" id='technology'>
+                <div class="side-menu-item" id='technology'>
                     TECHNOLOGY
                 </div>
-
-
-
-
             </div>
         </div>
+        
         <footer>
             <a href="https://newsapi.org/" target='_blank'>Powered by NewsAPI.org</a>
         </footer>
