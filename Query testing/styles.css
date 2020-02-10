@@ -1,0 +1,162 @@
+
+.complaint {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 10px 40px;
+}
+
+.complaint > * {
+  /* padding: 10px; */
+  flex: 1 100%;
+}
+
+.descriptor {
+    font-size: 1.5em;
+    padding: 5px 0px;
+    margin-left: 20px;
+  margin-right: 20px;
+  text-align: left;
+}
+
+.what-blue-did {
+  background: firebrick;
+  padding: 5px 0px;
+  color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 1.25em;
+}
+
+.resolution {
+    text-align: left;
+margin:20px 26px;
+  font-size: 1.5em;
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 0 0; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; }
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+
+body {
+  padding: 2em;
+}
+/* General style and a little bit responsive text  */
+body {
+    text-align: center;
+    font-family: Arial;
+    font-size: 10px;
+    background-color: #eeeeee;
+}
+
+/* center the container and imply margins */
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    justify-content: space-around;
+}
+
+form button {
+    height: 35px;
+    padding: 5px 15px;
+    margin: 2px 2px;
+    color: white;
+    font-size: 1em;
+    background: darkblue;
+    border: 1px solid rgba(255,255,255,10);
+
+}
+
+h1 {
+    font-size: 3vw;
+    color: var(--total-black);
+}
+
+h2 {
+    font-size: 2vw;
+}
+
+/* Modernize buttons and input */
+
+button {
+    margin-bottom: 1em;
+    padding: 1em 3em;
+    border-radius: .5em;
+}
+
+button:focus {
+    outline:0;
+    animation: rotate-center 0.6s ease-in-out both;
+}
+
+input {
+    width: 300px;
+    padding: 1em;
+}
+
+input:focus {
+    outline: none;
+    background: var(--grey-ice-blue);
+}
+
+.lists button:hover, button:hover {
+    background: rgba(100, 100, 100, .2);
+}
+
+.lists button:focus {
+    outline:0;
+    animation: jello-horizontal 0.9s both;
+}
+
+.lists button {
+    height: 18px;
+    padding: 1px 5px;
+    margin: 10px 100px;
+    color: black;
+    font-size: 10px;
+    background: lightgray;
+    border: 1px solid rgba(255,255,255, .5);
+  /* color: rgba(255,255,255, .5); */
+}
+
+/* make list containers flex */
+#to-do-list,  #completed {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+  margin: 1em;
+}
+
+/* style list items, common styles */
+.to-do-item, .done-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 45px;
+    color: white;
+    margin: .5em;
+    border-radius: 1em;
+    animation: zoom-in .3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    box-shadow: 2px 2px 4px gray;
+}
+
+/* Style list item specific to done-item */
+.to-do-item {
+  background:var(--calm-teal);
+}
+
+/* Style list item specific to done-item */
+.done-item {
+  background: var(--candy-pink);
+}
