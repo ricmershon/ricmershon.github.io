@@ -84,7 +84,7 @@ header, footer {
     cursor: pointer;
 }
 
-
+/* Form controls */
 
 form {
     margin-top: 40px;
@@ -100,12 +100,14 @@ form {
 #submit-button {
     margin-top: 5px;
     display: inline-block;
-    padding: 0.3em 1em;
+    padding: 1em 3em;
     text-decoration: none;
-    color: #636363;
-    border: solid 1px #636363;
-    border-radius: 2px;
+    margin-top: 5px;
+    color: white;
+    background: #636363;
+    border-radius: 3px;
     transition: .4s;
+    font-size: 10px;
 }
 
 #submit-button:hover {
@@ -113,7 +115,7 @@ form {
     color: #636363;
 }
 
-/* One container to hold all stories */
+/* One flexbox container to hold all stories */
 
 #story-container {
     display: flex;

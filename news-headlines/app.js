@@ -21,95 +21,90 @@ const showStories = (stories) => {
         $storyContainer.append($story)
 
     })
-
-    // for (let i = 0; i < stories.length; i++) {
-    //     console.log(stories[i]);
-    //
-    //     const $headline = $('<div>').addClass('headline').text(stories[i].description);
-    //     const $picture = $('<img>').addClass('picture').attr('src', stories[i].urlToImage);
-    //     const $summary = $('<div>').addClass('summary').text(stories[i].content);
-    //     const $link = $('<div>').addClass('link').text('Source: ' + stories[i].source.name);
-    //
-    //     $storyContainer.append($picture).append($headline).append($summary).append($link)
-    //
-    //
-    // }
-
 }
+
+/*
+ *******************************************************************************
+ *
+ * getKeywordsData queries the news api database given a keyword. Resulting
+ * articles are passed to the showStories() function for display.
+ *
+ *******************************************************************************
+ */
+
+const getKeywordsData = (keyword) => {
+
+    $.ajax({
+        url: "https://newsapi.org/v2/everything?language=en&q=" + keyword + "&apiKey=4e7c32eeb3194593a08c378c61e9aedc"
+    }).then(
+        (data) => {
+
+            // Call to showStories with data retrieved from database
+            // and reset the form.
+
+            showStories(data.articles);
+            $('.keyword-form').trigger('reset')
+        },
+        () => {
+            console.log('unable to retrive data')
+        }
+    )
+}
+
+/*
+ *******************************************************************************
+ *
+ * getHeadlinesData queries the news api database given a country name and
+ * category. Resulting articles are passed to the showStories() function
+ * for display.
+ *
+ *******************************************************************************
+ */
 
 const getHeadlinesData = (country, category) => {
 
-    console.log(category);
     $.ajax({
         url: "https://newsapi.org/v2/top-headlines?country=" + country +  "&category=" + category + "&apiKey=4e7c32eeb3194593a08c378c61e9aedc"
-
-        // url: "https://data.cityofnewyork.us/resource/erm2-nwe9.json?borough=" + borough + "&$limit=" + numRecords
     }).then(
         (data) => {
 
-            // Call to showComplaints with data retrieved from database.
-
-            console.log(data.articles);
+            // Call to showStories with data retrieved from database.
 
             showStories(data.articles);
-            // Reset the form.
-
-            // $('form').trigger('reset')
         },
         () => {
             console.log('unable to retrive data')
         }
     )
 }
-const getKeywordsData = (keyword) => {
 
-    console.log("https://newsapi.org/v2/everything?language=en&q=" + keyword + "&apiKey=4e7c32eeb3194593a08c378c61e9aedc");
-    $.ajax({
-        url: "https://newsapi.org/v2/everything?language=en&q=" + keyword + "&apiKey=4e7c32eeb3194593a08c378c61e9aedc"
-
-        // url: "https://data.cityofnewyork.us/resource/erm2-nwe9.json?borough=" + borough + "&$limit=" + numRecords
-    }).then(
-        (data) => {
-
-            // Call to showComplaints with data retrieved from database.
-
-            console.log(data.articles);
-
-            showStories(data.articles);
-            // Reset the form.
-
-            // $('form').trigger('reset')
-        },
-        () => {
-            console.log('unable to retrive data')
-        }
-    )
-}
+/*
+ *******************************************************************************
+ *
+ * On-load function sets up listeners for 3 input options: top menu, side menu
+ * and keyword box.
+ *
+ *******************************************************************************
+ */
 
 $(() => {
+
+    // Header menu
 
     $('.header-menu').click(() => {
         getHeadlinesData($(event.currentTarget).attr('id'), '')
     })
 
+    // Side menu
+
     $('.side-menu-item').click(() => {
-        event.preventDefault();
         getHeadlinesData('us', $(event.currentTarget).attr('id'))
     })
 
+    // Keywords box
+
     $('#submit-button').click(() => {
         event.preventDefault();
-
-        // Call getComplaints() with number of records requested
-        // and the id of the button pressed.
-
-        console.log($('#keyword-box[type="text"]').val());
-
         getKeywordsData($('#keyword-box[type="text"]').val())
-        //
-        // getComplaints($('#input-box[type="text"]').val(), $(event.currentTarget).attr('id'))
-
     })
-
-
 })
