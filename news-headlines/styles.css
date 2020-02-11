@@ -32,7 +32,7 @@ header {
 
 #header-menu {
     padding: 5px;
-    font-size: 10px;
+    font-size: 8px;
     color: white;
     width: 25%;
     display: flex;
@@ -60,7 +60,7 @@ header {
 
 #sub-menu-item-container {
     padding: 5px;
-    font-size: 10px;
+    font-size: 8px;
     color: white;
     width: 100%;
     display: flex;
@@ -86,7 +86,7 @@ header, footer {
 
 .sub-menu-item {
     /* padding: 1em 1em; */
-    font-size: 10px;
+    font-size: 8px;
     color: #636363;
 }
 
@@ -105,7 +105,7 @@ header, footer {
 form {
     /* margin-top: 40px; */
     padding: 1em 1em;
-    font-size: 10px;
+    font-size: 8px;
     color: #636363;
 }
 
@@ -123,7 +123,7 @@ form {
     background: #636363;
     border-radius: 3px;
     transition: .4s;
-    font-size: 10px;
+    font-size: 8px;
 }
 
 #submit-button:hover {
@@ -137,8 +137,9 @@ form {
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
-    width: 100%;
+    width: 96%;
     margin-left: 25px;
+    margin-right: 25px;
 }
 
 /* A single flexbox for each story */
@@ -179,7 +180,7 @@ form {
 /* Miscellaneous stuff */
 
 footer:  {
-    font-size: 10px;
+    font-size: 8px;
 }
 
  footer, .story, .sub-menu {
@@ -187,13 +188,13 @@ footer:  {
 }
 
 footer > a {
-    font-size: 10px;
+    font-size: 8px;
     color: white;
     text-decoration: none;
 }
 
 h2 {
-    font-size: 15px;
+    font-size: 12px;
 }
 
 
@@ -219,7 +220,11 @@ h2 {
     header {
         display: flex;
         padding: .5em;
-    }
+        background: #636363;
+        height: auto;
+        text-decoration: none;
+        color: white;
+}
 
     #header-title {
         padding: 5px;
@@ -257,7 +262,7 @@ h2 {
         flex: 1;
     }
 
-    header, footer {
+    footer {
         background: #636363;
         height: auto;
         text-decoration: none;
