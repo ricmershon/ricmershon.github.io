@@ -66,14 +66,14 @@ header, footer {
 /* Side menu controls */
 
 .side-menu {
-    flex: 0 0 20vw;
+    flex: 0 0 25vw;
     order: -1;
     border-right: 1px solid #636363;
     color: #636363;
 }
 
 .side-menu-item {
-    padding: 1.5em 1em;
+    padding: 1em 1em;
     font-size: 10px;
     color: #636363;
 }
@@ -82,6 +82,35 @@ header, footer {
     color: white;
     background: #636363;
     cursor: pointer;
+}
+
+
+
+form {
+    margin-top: 40px;
+    padding: 1em 1em;
+    font-size: 10px;
+    color: #636363;
+}
+
+#keyword-box {
+    width: 100%;
+}
+
+#submit-button {
+    margin-top: 5px;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #636363;
+    border: solid 1px #636363;
+    border-radius: 2px;
+    transition: .4s;
+}
+
+#submit-button:hover {
+    background: lightgray;
+    color: #636363;
 }
 
 /* One container to hold all stories */
@@ -100,7 +129,7 @@ header, footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    font-size: 15px;
+    font-size: 12.5px;
     width: 95%;
     min-height: 200px;
     margin-top: 15px;

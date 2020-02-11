@@ -6,6 +6,7 @@ const showStories = (stories) => {
     $storyContainer.empty();
 
     stories.forEach((story, i) => {
+
         $story = $('<div>').addClass('story');
         const $headline = $('<div>').addClass('headline').text(story.title);
         const $picture = $('<img>').addClass('picture').attr('src', story.urlToImage);
@@ -16,6 +17,7 @@ const showStories = (stories) => {
         $story.on('click', () => {
             window.open(story.url);
         })
+
         $storyContainer.append($story)
 
     })
@@ -35,10 +37,35 @@ const showStories = (stories) => {
 
 }
 
-const getHeadlinesData = (country) => {
+const getHeadlinesData = (country, category) => {
 
+    console.log(category);
     $.ajax({
-        url: "https://newsapi.org/v2/top-headlines?country=" + country +  "&apiKey=4e7c32eeb3194593a08c378c61e9aedc"
+        url: "https://newsapi.org/v2/top-headlines?country=" + country +  "&category=" + category + "&apiKey=4e7c32eeb3194593a08c378c61e9aedc"
+
+        // url: "https://data.cityofnewyork.us/resource/erm2-nwe9.json?borough=" + borough + "&$limit=" + numRecords
+    }).then(
+        (data) => {
+
+            // Call to showComplaints with data retrieved from database.
+
+            console.log(data.articles);
+
+            showStories(data.articles);
+            // Reset the form.
+
+            // $('form').trigger('reset')
+        },
+        () => {
+            console.log('unable to retrive data')
+        }
+    )
+}
+const getKeywordsData = (keyword) => {
+
+    console.log("https://newsapi.org/v2/everything?language=en&q=" + keyword + "&apiKey=4e7c32eeb3194593a08c378c61e9aedc");
+    $.ajax({
+        url: "https://newsapi.org/v2/everything?language=en&q=" + keyword + "&apiKey=4e7c32eeb3194593a08c378c61e9aedc"
 
         // url: "https://data.cityofnewyork.us/resource/erm2-nwe9.json?borough=" + borough + "&$limit=" + numRecords
     }).then(
@@ -60,14 +87,29 @@ const getHeadlinesData = (country) => {
 }
 
 $(() => {
+
     $('.header-menu').click(() => {
-        event.preventDefault();
-        getHeadlinesData($(event.currentTarget).attr('id'))
+        getHeadlinesData($(event.currentTarget).attr('id'), '')
     })
 
-    $('.side-nav-item').click(() => {
+    $('.side-menu-item').click(() => {
         event.preventDefault();
-        getData($(event.currentTarget).attr('id'))
+        getHeadlinesData('us', $(event.currentTarget).attr('id'))
     })
+
+    $('#submit-button').click(() => {
+        event.preventDefault();
+
+        // Call getComplaints() with number of records requested
+        // and the id of the button pressed.
+
+        console.log($('#keyword-box[type="text"]').val());
+
+        getKeywordsData($('#keyword-box[type="text"]').val())
+        //
+        // getComplaints($('#input-box[type="text"]').val(), $(event.currentTarget).attr('id'))
+
+    })
+
 
 })
