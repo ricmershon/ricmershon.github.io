@@ -1,181 +1,185 @@
-* {
-  box-sizing: border-box;
-  /* border: 1px solid silver; */
-}
+@media (min-width: 600px) {
+    * {
+        box-sizing: border-box;
+        /* border: 1px solid silver; */
+    }
 
-/* Body defined as a flexbox with arial as the common font family */
+    /* Body defined as a flexbox with arial as the common font family */
 
-body {
-  display: flex;
-  min-height: 80vh;
-  flex-direction: column;
-  margin: 0;
-  font-family: arial; sans-serif;
-}
+    body {
+        background: white;
+        display: flex;
+        min-height: 80vh;
+        flex-direction: column;
+        margin: 0;
+        font-family: arial; sans-serif;
+    }
 
-/* Header components */
+    /* Header components */
 
-header {
-    display: flex;
-    padding: .5em;
-}
+    header {
+        display: flex;
+        padding: .5em;
+    }
 
-#header-left {
-    padding: 5px;
-    font-size: 15px;
-    color: white;
-    margin: 1px;
-    width: 70%;
-}
+    #header-title {
+        padding: 5px;
+        /* font-size: 15px; */
+        color: white;
+        margin: 1px;
+        width: 70%;
+    }
 
-#header-right {
-    padding: 5px;
-    font-size: 10px;
-    color: white;
-    width: 25%;
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-}
+    #header-menu {
+        padding: 5px;
+        font-size: 10px;
+        color: white;
+        width: 25%;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+    }
 
-.header-menu {
-    padding: 5px;
-}
+    .header-menu-item {
+        padding: 5px;
+    }
 
-.header-menu:hover {
-    color: #636363;
-    background: white;
-    cursor: pointer;
-}
+    .header-menu-item:hover {
+        color: #636363;
+        background: white;
+        cursor: pointer;
+    }
 
-/* The main part of the display holds the container for individual stories and the side menu bar */
+    /* The main part of the display holds the container for individual stories and the side menu bar */
 
-#main {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-}
+    #main {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+    }
 
-header, footer {
-  background: #636363;
-  height: auto;
-  text-decoration: none;
-  color: white;
-}
+    header, footer {
+        background: #636363;
+        height: auto;
+        text-decoration: none;
+        color: white;
+    }
 
-/* Side menu controls */
+    /* Side menu controls */
 
-.side-menu {
-    flex: 0 0 25vw;
-    order: -1;
-    border-right: 1px solid #636363;
-    color: #636363;
-}
+    .sub-menu {
+        flex: 0 0 25vw;
+        order: -1;
+        border-right: 1px solid #636363;
+        color: #636363;
+    }
 
-.side-menu-item {
-    padding: 1em 1em;
-    font-size: 10px;
-    color: #636363;
-}
+    .sub-menu-item {
+        padding: 1em 1em;
+        font-size: 10px;
+        color: #636363;
+    }
 
-.side-menu-item:hover {
-    color: white;
-    background: #636363;
-    cursor: pointer;
-}
+    .sub-menu-item:hover {
+        color: white;
+        background: #636363;
+        cursor: pointer;
+    }
 
-/* Form controls */
+    /* Form controls */
 
-form {
-    margin-top: 40px;
-    padding: 1em 1em;
-    font-size: 10px;
-    color: #636363;
-}
+    form {
+        margin-top: 40px;
+        padding: 1em 1em;
+        font-size: 10px;
+        color: #636363;
+    }
 
-#keyword-box {
-    width: 100%;
-}
+    #keyword-box {
+        width: 100%;
+    }
 
-#submit-button {
-    margin-top: 5px;
-    display: inline-block;
-    padding: 1em 3em;
-    text-decoration: none;
-    margin-top: 5px;
-    color: white;
-    background: #636363;
-    border-radius: 3px;
-    transition: .4s;
-    font-size: 10px;
-}
+    #submit-button {
+        margin-top: 5px;
+        display: inline-block;
+        padding: 1em 3em;
+        text-decoration: none;
+        margin-top: 5px;
+        color: white;
+        background: #636363;
+        border-radius: 3px;
+        transition: .4s;
+        font-size: 10px;
+    }
 
-#submit-button:hover {
-    background: lightgray;
-    color: #636363;
-}
+    #submit-button:hover {
+        background: lightgray;
+        color: #636363;
+    }
 
-/* One flexbox container to hold all stories */
+    /* One flexbox container to hold all stories */
 
-#story-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    width: 100%;
-    margin-left: 25px;
-}
+    #story-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        width: 100%;
+        margin-left: 25px;
+    }
 
-/* A single flexbox for each story */
+    /* A single flexbox for each story */
 
-.story {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    font-size: 12.5px;
-    width: 95%;
-    min-height: 200px;
-    margin-top: 15px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 5px;
-}
+    .story {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        font-size: 12.5px;
+        width: 95%;
+        min-height: 200px;
+        margin-top: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        border-radius: 5px;
+    }
 
-.story:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
+    .story:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
 
-.headline {
-    width: 70%;
-    margin-left: 10px;
-}
+    .headline {
+        width: 70%;
+        margin-left: 10px;
+    }
 
-.picture {
-    width: 25%;
-}
+    .picture {
+        width: 25%;
+    }
 
-.summary, .source {
-    width: 100%;
-}
+    .summary, .source {
+        width: 100%;
+    }
 
-.summary, .picture, .source {
-    margin: 5px;
-}
+    .summary, .picture, .source {
+        margin: 5px;
+    }
 
-/* Miscellaneous stuff */
+    /* Miscellaneous stuff */
 
-footer:  {
-    font-size: 10px;
-}
+    footer:  {
+        font-size: 10px;
+    }
 
- footer, .story, .side-menu {
-  padding: 1em;
-}
+     footer, .story, .sub-menu {
+      padding: 1em;
+    }
 
-footer > a {
-    font-size: 10px;
-    color: white;
-    text-decoration: none;
-}
+    footer > a {
+        font-size: 10px;
+        color: white;
+        text-decoration: none;
+    }
 
-h2 {
-    font-size: 15px;
+    h2 {
+        font-size: 15px;
+    }
+
 }

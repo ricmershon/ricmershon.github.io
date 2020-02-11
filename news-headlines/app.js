@@ -1,25 +1,35 @@
-
+/*
+ *******************************************************************************
+ *
+ * showStories() displays the stories on the screen.
+ *
+ *******************************************************************************
+ */
 
 const showStories = (stories) => {
+
+    // Grab the story container from the DOM and empty the current list
+    // of stories.
 
     const $storyContainer = $('#story-container')
     $storyContainer.empty();
 
-    stories.forEach((story, i) => {
+    // Build the individual stories.
 
+    stories.forEach((story, i) => {
         $story = $('<div>').addClass('story');
         const $headline = $('<div>').addClass('headline').text(story.title);
         const $picture = $('<img>').addClass('picture').attr('src', story.urlToImage);
         const $summary = $('<div>').addClass('summary').text(story.content);
         const $source = $('<div>').addClass('source').text('Source: ' + story.source.name);
 
-        $story.append($picture).append($headline).append($summary).append($source)
-        $story.on('click', () => {
-            window.open(story.url);
-        })
+        // Put it all together.
 
-        $storyContainer.append($story)
+        $story.append($picture).append($headline).append($summary).append($source).appendTo($storyContainer)
 
+        // Set listener to open the url for the story in a new window
+        // when it's clicked.
+        $story.click(() => { window.open(story.url) })
     })
 }
 
@@ -91,13 +101,13 @@ $(() => {
 
     // Header menu
 
-    $('.header-menu').click(() => {
+    $('.header-menu-item').click(() => {
         getHeadlinesData($(event.currentTarget).attr('id'), '')
     })
 
     // Side menu
 
-    $('.side-menu-item').click(() => {
+    $('.sub-menu-item').click(() => {
         getHeadlinesData('us', $(event.currentTarget).attr('id'))
     })
 
