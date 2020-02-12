@@ -1,4 +1,4 @@
-# rmersh65.github.io
+# News Headlines at rmersh65.github.io
 Display news headlines from the US, Canada and Mexico.
 
 ## Designer and Engineer
@@ -10,7 +10,7 @@ This project uses the News API, which can be found at https://newsapi.org/. It u
 * Top headlines - returns breaking news for a country and category.
 * Everything - returns breaking news from around the world based on keywords and keyword phrases.
 
-See https://newsapi.org/docs/endpoints for more information on these endpoints.
+See https://newsapi.org/docs/endpoints for more information.
 
 ## Wireframes
 Wireframe were created with Adobe XD. They can be found at [wireframes](https://xd.adobe.com/view/cc534d99-fba5-4fc9-525b-4cb79c5e129a-ba62/).
@@ -26,21 +26,22 @@ The static layout contains:
 * Story container - holds all the individual stories.
 * Footer - contains the required News API attribution.
 
-## Responsive Design
-The application has a responsive design where display elements are stacked and fonts are shrunk for smaller displays, like smart phones.
-
-### Dynamic Elements - News stories
+## Dynamic Elements - News stories
 News stories are loaded into the story container after query of the News API database. Each news story contain 4 elements: a picture, a headline, summary description and a news source. The entire `<div>` for each story is an active link that will open the source url of the link in a new window.
 
 Each news story `<div>` is distinguished from the next with padding, margins and drop-shadows, giving them a card-like feel. Hovering over the story changes the shadowing on the card to make it look raised, indicating it is active and can be clicked on to open the story.
 
+## Responsive Design
+The application has a responsive design where display elements are stacked and fonts are shrunk for smaller displays, like smart phones.
+
+#
 ## Technologies used:
 
 * [jQuery](https://jquery.com/) - JavaScript library for DOM traversal and manipulation.
 * [Ajax](https://api.jquery.com/jquery.ajax/) - Web technology used to send and retrieve data from a server asynchronously without interfering with the display and behavior of the page
-* [Adobe XD](https://www.adobe.com/products/xd.html?sdid=12B9F15S&mv=Search&ef_id=CjwKCAiAvonyBRB7EiwAadauqWmOixI61Qf9ss2N6uknIujAN22N8Qc4_AZqnOFY4PI0PFRsFicQCxoC30oQAvD_BwE:G:s&s_kwcid=AL!3085!3!315233774109!e!!g!!adobe%20xd) - Used for wireframing. It comes for free in an Adobe package for which I have a subscription. I found it to be very powerful, big, bulky and cumbersome. Unless I'm working on a huge project I will look for other tools.
+* [Adobe XD](https://www.adobe.com/products/xd.html?sdid=12B9F15S&mv=Search&ef_id=CjwKCAiAvonyBRB7EiwAadauqWmOixI61Qf9ss2N6uknIujAN22N8Qc4_AZqnOFY4PI0PFRsFicQCxoC30oQAvD_BwE:G:s&s_kwcid=AL!3085!3!315233774109!e!!g!!adobe%20xd) - Used for wireframing. It comes for free in an Adobe package for which I have a subscription. I found it to be very powerful, yet big, bulky and cumbersome. Unless I'm working on a huge project I will look for other tools.
 
-## Code:
+## Code
 The code has functions to perform these operations:
 * Create event listeners.
 * Get data.
@@ -53,11 +54,20 @@ Three event listeners are enabled inside the on load function. One each for sect
 Two functions are invoked and use Ajax to pull data from the News API database: `getHeadlines()` pulls data for the country and US category queries. `getKeywordsData()` pulls data for keyword queries. Both call passing an array of stories as an argument `showStories()` to display stories.
 
 ### Display Data
-`showStories` takes an array of stories as a parameter, builds an individual story of class `'story'` for each news story and attaches it to the `#story-container <div>.` The `.click()` method is assigned for each story with the URL of the story, contained within each record for a story in the stories array.
+The `showStories()` function takes an array of stories as a parameter, builds an individual story of class `'story'` for each news story and attaches it to the `#story-container <div>.` The `.click()` method is assigned for each story with the URL of the story, contained within each record for a story in the stories array.
 
 ## Known Issues
+Slight movement of the header text on the top right when data is displayed.
 
 ## Areas for Improvement
+
+### User Interface
+* Making the header and sidebar sticky. I tried but could not get this to work.
+* For context, I would like to see the country and category sections have their hover changes remain while stories are displayed.
+* Get rid of the ugly blue highlighting around the form elements.
+
+### JavaScript
+More work could be done to put code into objects.
 
 ## Acknowledgements
 

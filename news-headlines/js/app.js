@@ -1,5 +1,17 @@
 /*
  *******************************************************************************
+ *******************************************************************************
+ *
+ * Project #1: My first application
+ * Due: 13-Feb-2020
+ * Created by: Ric Mershon
+ *
+ *******************************************************************************
+ *******************************************************************************
+ */
+
+/*
+ *******************************************************************************
  *
  * showStories() displays the stories on the screen.
  *
@@ -29,6 +41,7 @@ const showStories = (stories) => {
 
         // Set listener to open the url for the story in a new window
         // when it's clicked.
+
         $story.click(() => { window.open(story.url) })
     })
 }
@@ -36,7 +49,7 @@ const showStories = (stories) => {
 /*
  *******************************************************************************
  *
- * getKeywordsData queries the news api database given a keyword. Resulting
+ * getKeywordsData() queries the news api database given a keyword. Resulting
  * articles are passed to the showStories() function for display.
  *
  *******************************************************************************
@@ -64,7 +77,7 @@ const getKeywordsData = (keyword) => {
 /*
  *******************************************************************************
  *
- * getHeadlinesData queries the news api database given a country name and
+ * getHeadlinesData() queries the news api database given a country name and
  * category. Resulting articles are passed to the showStories() function
  * for display.
  *
@@ -98,21 +111,12 @@ const getHeadlinesData = (country, category) => {
  */
 
 $(() => {
-
-    // Header menu
-
     $('.header-menu-item').click(() => {
         getHeadlinesData($(event.currentTarget).attr('id'), '')
     })
-
-    // Side menu
-
     $('.sub-menu-item').click(() => {
         getHeadlinesData('us', $(event.currentTarget).attr('id'))
     })
-
-    // Keywords box
-
     $('#submit-button').click(() => {
         event.preventDefault();
         getKeywordsData($('#keyword-box[type="text"]').val())
