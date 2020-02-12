@@ -3,6 +3,11 @@
     /* border: 1px solid silver; */
 }
 
+*:focus {
+    outline: none;
+}
+
+
 /* Body defined as a flexbox with arial as the common font family */
 
 body {
@@ -118,6 +123,9 @@ form {
     display: inline-block;
     padding: .75em 2em;
     text-decoration: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
     margin-top: 5px;
     color: white;
     background: #636363;
@@ -153,7 +161,7 @@ form {
     min-height: 200px;
     margin-top: 15px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .story:hover {
@@ -204,6 +212,10 @@ h2 {
         /* border: 1px solid silver; */
     }
 
+    *:focus {
+        outline: none;
+    }
+
     /* Body defined as a flexbox with arial as the common font family */
 
     body {
@@ -224,7 +236,7 @@ h2 {
         height: auto;
         text-decoration: none;
         color: white;
-}
+    }
 
     #header-title {
         padding: 5px;
@@ -313,11 +325,13 @@ h2 {
         display: inline-block;
         padding: 1em 3em;
         text-decoration: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
         margin-top: 5px;
         color: white;
         background: #636363;
         border-radius: 3px;
-        transition: .4s;
         font-size: 10px;
     }
 
@@ -347,7 +361,7 @@ h2 {
         min-height: 200px;
         margin-top: 15px;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        border-radius: 5px;
+        border-radius: 3px;
     }
 
     .story:hover {
