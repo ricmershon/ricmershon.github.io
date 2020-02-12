@@ -7,9 +7,36 @@ Ric Mershon
 ## Background
 This project uses the News API, which can be found at https://newsapi.org/. It uses both of the News API main endpoints:
 
-* Top headlines - returns breaking news for a country and category.
-* Everything - returns breaking news from around the world based on keywords and keyword phrases.
+* Top headlines - returns breaking news for a country and category. Ajax call from app.js:
+```
+$.ajax({
+    url: "https://newsapi.org/v2/top-headlines?country=" + country +  "&category=" + category + "&apiKey=4e7c32eeb3194593a08c378c61e9aedc"
+}).then(
+    (data) => {
 
+        // Call to showStories with data retrieved from database.
+
+        showStories(data.articles);
+    },
+    () => console.log('unable to retrive data')
+)
+```
+* Everything - returns breaking news from around the world based on keywords and keyword phrases. Ajax call from app.js:
+```
+$.ajax({
+    url: "https://newsapi.org/v2/everything?language=en&q=" + keyword + "&apiKey=4e7c32eeb3194593a08c378c61e9aedc"
+}).then(
+    (data) => {
+
+        // Call to showStories with data retrieved from database
+        // and reset the form.
+
+        showStories(data.articles);
+        $('.keyword-form').trigger('reset')
+    },
+    () => console.log('unable to retrive data')
+)
+```
 See https://newsapi.org/docs/endpoints for more information.
 
 ## Accessing the Application
@@ -19,7 +46,10 @@ Got to https://rmersh65.github.io/news-headlines/.
 ## Wireframes
 Wireframe were created with Adobe XD. They can be found at [wireframes](https://xd.adobe.com/view/cc534d99-fba5-4fc9-525b-4cb79c5e129a-ba62/).
 
-## Layout Details
+## Layout Details and Approach
+I'm finally getting the hang of CSS--a little. I picked up a dotted Moleskine notebook (thank you Karolin Rafalski for the recommendation!) and started working the elements from the *inside out*. I found this to be EXTREMELY helpful, and would recommend this approach to anyone struggling with CSS and Flexbox. I ended up with pages and pages
+
+
 The layout consists of static and dynamic elements. See the previous section on wireframes for a visual reference.
 
 ### Static elements
@@ -30,20 +60,20 @@ The static layout contains:
 * Story container - holds all the individual stories.
 * Footer - contains the required News API attribution.
 
-## Dynamic Elements - News stories
+### Dynamic Elements - News stories
 News stories are loaded into the story container after query of the News API database. Each news story contain 4 elements: a picture, a headline, summary description and a news source. The entire `<div>` for each story is an active link that will open the source url of the link in a new window.
 
 Each news story `<div>` is distinguished from the next with padding, margins and drop-shadows, giving them a card-like feel. Hovering over the story changes the shadowing on the card to make it look raised, indicating it is active and can be clicked on to open the story.
 
-## Responsive Design
+### Responsive Design
 The application has a responsive design where display elements are stacked and fonts are shrunk for smaller displays, like smart phones.
 
-#
 ## Technologies used:
 
 * [jQuery](https://jquery.com/) - JavaScript library for DOM traversal and manipulation.
 * [Ajax](https://api.jquery.com/jquery.ajax/) - Web technology used to send and retrieve data from a server asynchronously without interfering with the display and behavior of the page.
 * [Adobe XD](https://www.adobe.com/products/xd.html?sdid=12B9F15S&mv=Search&ef_id=CjwKCAiAvonyBRB7EiwAadauqWmOixI61Qf9ss2N6uknIujAN22N8Qc4_AZqnOFY4PI0PFRsFicQCxoC30oQAvD_BwE:G:s&s_kwcid=AL!3085!3!315233774109!e!!g!!adobe%20xd) - Used for wireframing. It comes for free in an Adobe package for which I have a subscription. I found it to be very powerful, yet big, bulky and cumbersome. Unless I'm working on a huge project I will look for other tools.
+* [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - Allows responsive elements within a container to be automatically arranged depending upon screen size (or device).
 
 ## Code
 The code has functions to perform these operations:
