@@ -23,13 +23,13 @@ const showStories = (stories) => {
     // Grab the story container from the DOM and empty the current list
     // of stories.
 
-    const $storyContainer = $('#story-container')
+    const $storyContainer = $('#story-container');
     $storyContainer.empty();
 
     // Build the individual stories.
 
     stories.forEach((story, i) => {
-        $story = $('<div>').addClass('story');
+        const $story = $('<div>').addClass('story');
         const $headline = $('<div>').addClass('headline').text(story.title);
         const $picture = $('<img>').addClass('picture').attr('src', story.urlToImage);
         const $summary = $('<div>').addClass('summary').text(story.content);
@@ -37,12 +37,12 @@ const showStories = (stories) => {
 
         // Put it all together.
 
-        $story.append($picture).append($headline).append($summary).append($source).appendTo($storyContainer)
+        $story.append($picture).append($headline).append($summary).append($source).appendTo($storyContainer);
 
         // Set listener to open the url for the story in a new window
         // when it's clicked.
 
-        $story.click(() => { window.open(story.url) })
+        $story.click(() => window.open(story.url) )
     })
 }
 
@@ -68,9 +68,7 @@ const getKeywordsData = (keyword) => {
             showStories(data.articles);
             $('.keyword-form').trigger('reset')
         },
-        () => {
-            console.log('unable to retrive data')
-        }
+        () => console.log('unable to retrive data')
     )
 }
 
@@ -95,9 +93,7 @@ const getHeadlinesData = (country, category) => {
 
             showStories(data.articles);
         },
-        () => {
-            console.log('unable to retrive data')
-        }
+        () => console.log('unable to retrive data')
     )
 }
 

@@ -12,6 +12,10 @@ This project uses the News API, which can be found at https://newsapi.org/. It u
 
 See https://newsapi.org/docs/endpoints for more information.
 
+## Accessing the Application
+
+Got to https://rmersh65.github.io/news-headlines/.
+
 ## Wireframes
 Wireframe were created with Adobe XD. They can be found at [wireframes](https://xd.adobe.com/view/cc534d99-fba5-4fc9-525b-4cb79c5e129a-ba62/).
 
@@ -71,4 +75,4 @@ More work could be done to put code into objects.
 
 ## Acknowledgements
 
-* Thank you to King Arthur for advice, guidance, support and chocolate chip cookie recipes!!!
+Thank you to King Arthur for advice, guidance, support and chocolate chip cookie recipes!!!
