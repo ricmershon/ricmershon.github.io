@@ -14,10 +14,7 @@ $.ajax({
      + country +  "&category=" + category + "&apiKey="
 }).then(
     (data) => {
-
-        // Call to showStories with data retrieved from database.
-
-        showStories(data.articles);
+        ...
     },
     () => console.log('unable to retrieve data')
 )
@@ -29,12 +26,7 @@ $.ajax({
      + keyword + "&apiKey="
 }).then(
     (data) => {
-
-        // Call to showStories with data retrieved from database
-        // and reset the form.
-
-        showStories(data.articles);
-        $('.keyword-form').trigger('reset')
+        ...
     },
     () => console.log('unable to retrieve data')
 )
@@ -84,7 +76,7 @@ The code has functions to perform these operations:
 * Display data.
 
 ### Event Listeners
-Three event listeners are enabled inside the on load function. One each for sections by 1. country, 2. US category and 3. Worldwide keyword search.
+Four event listeners are enabled inside the on load function. One each for  the welcome screen worldwide keyword search, and sections by 1. country, 2. US category and 3. worldwide keyword search.
 
 ### Get Data
 Two functions are invoked and use Ajax to pull data from the News API database: `getHeadlines()` pulls data for the country and US category queries. `getKeywordsData()` pulls data for keyword queries. Both call passing an array of stories as an argument `showStories()` to display stories.
