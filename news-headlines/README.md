@@ -42,7 +42,7 @@ The application has a responsive design where display elements are stacked and f
 ## Technologies used:
 
 * [jQuery](https://jquery.com/) - JavaScript library for DOM traversal and manipulation.
-* [Ajax](https://api.jquery.com/jquery.ajax/) - Web technology used to send and retrieve data from a server asynchronously without interfering with the display and behavior of the page
+* [Ajax](https://api.jquery.com/jquery.ajax/) - Web technology used to send and retrieve data from a server asynchronously without interfering with the display and behavior of the page.
 * [Adobe XD](https://www.adobe.com/products/xd.html?sdid=12B9F15S&mv=Search&ef_id=CjwKCAiAvonyBRB7EiwAadauqWmOixI61Qf9ss2N6uknIujAN22N8Qc4_AZqnOFY4PI0PFRsFicQCxoC30oQAvD_BwE:G:s&s_kwcid=AL!3085!3!315233774109!e!!g!!adobe%20xd) - Used for wireframing. It comes for free in an Adobe package for which I have a subscription. I found it to be very powerful, yet big, bulky and cumbersome. Unless I'm working on a huge project I will look for other tools.
 
 ## Code
@@ -66,6 +66,11 @@ Slight movement of the header text on the top right when data is displayed.
 ## Areas for Improvement
 
 ### User Interface
+
+#### Model Box at Load
+First and foremost it's not clear to the users what should be done when the page is loaded. A modal box would help but it became a bit complex and I couldn't get it to work. See the second page of the wireframe for my thouhts on the modal box look, feel and functionality.
+
+#### Other User Interface Improvements
 * Making the header and sidebar sticky. I tried but could not get this to work.
 * For context, I would like to see the country and category sections have their hover changes remain while stories are displayed.
 * Get rid of the ugly blue highlighting around the form elements.
@@ -74,5 +79,4 @@ Slight movement of the header text on the top right when data is displayed.
 More work could be done to put code into objects.
 
 ## Acknowledgements
-
 Thank you to King Arthur for advice, guidance, support and chocolate chip cookie recipes!!!
