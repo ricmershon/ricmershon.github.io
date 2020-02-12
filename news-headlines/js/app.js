@@ -68,7 +68,7 @@ const getKeywordsData = (keyword) => {
             showStories(data.articles);
             $('.keyword-form').trigger('reset')
         },
-        () => console.log('unable to retrive data')
+        () => console.log('unable to retrieve data')
     )
 }
 
@@ -93,7 +93,7 @@ const getHeadlinesData = (country, category) => {
 
             showStories(data.articles);
         },
-        () => console.log('unable to retrive data')
+        () => console.log('unable to retrieve data')
     )
 }
 

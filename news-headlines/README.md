@@ -10,7 +10,8 @@ This project uses the News API, which can be found at https://newsapi.org/. It u
 * Top headlines - returns breaking news for a country and category. Ajax call from app.js:
 ```
 $.ajax({
-    url: "https://newsapi.org/v2/top-headlines?country=" + country +  "&category=" + category + "&apiKey=4e7c32eeb3194593a08c378c61e9aedc"
+    url: "https://newsapi.org/v2/top-headlines?country="
+     + country +  "&category=" + category + "&apiKey="
 }).then(
     (data) => {
 
@@ -18,13 +19,14 @@ $.ajax({
 
         showStories(data.articles);
     },
-    () => console.log('unable to retrive data')
+    () => console.log('unable to retrieve data')
 )
 ```
 * Everything - returns breaking news from around the world based on keywords and keyword phrases. Ajax call from app.js:
 ```
 $.ajax({
-    url: "https://newsapi.org/v2/everything?language=en&q=" + keyword + "&apiKey=4e7c32eeb3194593a08c378c61e9aedc"
+    url: "https://newsapi.org/v2/everything?language=en&q="
+     + keyword + "&apiKey="
 }).then(
     (data) => {
 
@@ -34,7 +36,7 @@ $.ajax({
         showStories(data.articles);
         $('.keyword-form').trigger('reset')
     },
-    () => console.log('unable to retrive data')
+    () => console.log('unable to retrieve data')
 )
 ```
 See https://newsapi.org/docs/endpoints for more information.
@@ -110,3 +112,5 @@ More work could be done to put code into objects.
 
 ## Acknowledgements
 Thank you to King Arthur for advice, guidance, support and chocolate chip cookie recipes!!!
+
+Karolin for the dotted notebook recommendation.
