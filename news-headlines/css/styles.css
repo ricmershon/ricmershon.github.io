@@ -87,6 +87,7 @@ header, footer {
     order: -1;
     border-bottom: 1px solid #636363;
     color: #636363;
+    padding-top: 1rem;
 }
 
 .sub-menu-item {
@@ -233,9 +234,13 @@ h2 {
         display: flex;
         padding: .5em;
         background: #636363;
-        height: auto;
+        height: 3rem;
         text-decoration: none;
         color: white;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100vw;
     }
 
     #header-title {
@@ -272,6 +277,7 @@ h2 {
         display: flex;
         flex-direction: row;
         flex: 1;
+        position: relative;
     }
 
     footer {
@@ -284,14 +290,19 @@ h2 {
     /* Side menu controls */
 
     .sub-menu {
+        top: 3rem;
         flex: 0 0 25vw;
         order: -1;
         border-right: 1px solid #636363;
+        border-bottom: none;
         color: #636363;
+        padding-top: 1.25rem;
+        position: sticky;
+        max-height: 100vh;
     }
 
     .sub-menu-item, .keyword-form {
-        padding: 1em 1em;
+        padding: 1em .5em;
         font-size: 10px;
         color: #636363;
     }
@@ -345,7 +356,7 @@ h2 {
     #story-container {
         display: flex;
         flex-wrap: wrap;
-        margin-top: 20px;
+        margin-top: 4rem;
         width: 100%;
         margin-left: 25px;
     }
@@ -391,7 +402,7 @@ h2 {
         font-size: 10px;
     }
 
-     footer, .story, .sub-menu {
+     footer, .story {
       padding: 1em;
     }
 
