@@ -93,19 +93,13 @@ Two functions are invoked and use Ajax to pull data from the News API database: 
 The `showStories()` function takes an array of stories as a parameter, builds an individual story of class `'story'` for each news story and attaches it to the `#story-container <div>.` The `.click()` method is assigned for each story with the URL of the story, contained within each record for a story in the stories array.
 
 ## Known Issues
-Slight movement of the header text on the top right when data is displayed.
+* Slight movement of the header text on the top right when data is displayed.
+* Top of the submenu disappears when the window is scrolled all the way to the bottom.
 
 ## Areas for Improvement
 
 ### User Interface
-
-#### Model Box at Load
-First and foremost it's not clear to the users what should be done when the page is loaded. A modal box would help but it became a bit complex and I couldn't get it to work. See the second page of the wireframe for my thouhts on the modal box look, feel and functionality.
-
-#### Other User Interface Improvements
-* Making the header and sidebar sticky. I tried but could not get this to work.
 * For context, I would like to see the country and category sections have their hover changes remain while stories are displayed.
-* Get rid of the ugly blue highlighting around the form elements.
 
 ### JavaScript
 More work could be done to put code into objects.

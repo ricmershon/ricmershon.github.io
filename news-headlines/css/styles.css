@@ -65,7 +65,7 @@ header {
 
 #sub-menu-item-container {
     padding: 5px;
-    font-size: 8px;
+    font-size: 10px;
     color: white;
     width: 100%;
     display: flex;
@@ -115,11 +115,14 @@ form {
     color: #636363;
 }
 
+
+
 #keyword-box {
     width: 100%;
+    height: 20px;
 }
 
-#submit-button {
+.submit-button {
     margin-top: 5px;
     display: inline-block;
     padding: .75em 2em;
@@ -135,10 +138,34 @@ form {
     font-size: 8px;
 }
 
-#submit-button:hover {
+.submit-button:hover {
     background: lightgray;
     color: #636363;
 }
+
+#welcome-keyword-box {
+    width: 60%;
+    height: 2.7em;
+}
+
+#welcome-container {
+    width: 80%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-left: 15px;
+    padding: 25px 50px;
+}
+
+#welcome-container > p {
+    font-size: 10px;
+}
+
+h1 {
+    font-size: 20px;
+}
+
 
 /* One flexbox container to hold all stories */
 
@@ -248,17 +275,17 @@ h2 {
         /* font-size: 15px; */
         color: white;
         margin: 1px;
-        width: 70%;
+        width: 60%;
     }
 
     #header-menu {
         padding: 5px;
         font-size: 10px;
         color: white;
-        width: 25%;
+        width: 35%;
         display: flex;
         text-align: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     .header-menu-item {
@@ -278,6 +305,7 @@ h2 {
         flex-direction: row;
         flex: 1;
         position: relative;
+        min-height: 115vh;
     }
 
     footer {
@@ -301,9 +329,15 @@ h2 {
         max-height: 100vh;
     }
 
-    .sub-menu-item, .keyword-form {
+    .sub-menu-item {
         padding: 1em .5em;
         font-size: 10px;
+        color: #636363;
+    }
+
+    .keyword-form {
+        font-size: 10px;
+        padding-left: 0px;
         color: #636363;
     }
 
@@ -326,14 +360,15 @@ h2 {
         color: #636363;
     }
 
-    #keyword-box {
-        margin-top: 5px;
+    #submenu-keyword-box {
         width: 100%;
+        height: 2.7em;
     }
 
-    #submit-button {
+
+    .submit-button {
         margin-top: 5px;
-        display: inline-block;
+        /* display: inline-block; */
         padding: 1em 3em;
         text-decoration: none;
         border: none;
@@ -346,7 +381,7 @@ h2 {
         font-size: 10px;
     }
 
-    #submit-button:hover {
+    .submit-button:hover {
         background: lightgray;
         color: #636363;
     }
@@ -361,6 +396,24 @@ h2 {
         margin-left: 25px;
     }
 
+    #welcome-keyword-box {
+        width: 60%;
+        height: 2.7em;
+    }
+
+    #welcome-container {
+        width: 80%;
+        height: 25%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        border-radius: 3px;
+        margin-top: 50px;
+        margin-left: 15px;
+        padding: 25px 50px;
+    }
+
+    #welcome-container > p {
+        font-size: 15px;
+    }
     /* A single flexbox for each story */
 
     .story {

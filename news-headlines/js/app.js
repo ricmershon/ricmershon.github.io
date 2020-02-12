@@ -113,8 +113,12 @@ $(() => {
     $('.sub-menu-item').click(() => {
         getHeadlinesData('us', $(event.currentTarget).attr('id'))
     })
-    $('#submit-button').click(() => {
+    $('#submenu-button').click(() => {
         event.preventDefault();
-        getKeywordsData($('#keyword-box[type="text"]').val())
+        getKeywordsData($('#submenu-keyword-box[type="text"]').val())
+    })
+    $('#welcome-button').click(() => {
+        event.preventDefault();
+        getKeywordsData($('#welcome-keyword-box[type="text"]').val())
     })
 })
