@@ -7,7 +7,8 @@ Ric Mershon
 ## Background
 This project uses the News API, which can be found at https://newsapi.org/. It uses both of the News API main endpoints:
 
-* Top headlines - returns breaking news for a country and category. Ajax call from app.js:
+### Top Headlines
+Returns breaking news for a country and category. Ajax call from app.js:
 ```
 $.ajax({
     url: "https://newsapi.org/v2/top-headlines?country="
@@ -19,7 +20,8 @@ $.ajax({
     () => console.log('unable to retrieve data')
 )
 ```
-* Everything - returns breaking news from around the world based on keywords and keyword phrases. Ajax call from app.js:
+### Everything
+Returns breaking news from around the world based on keywords and keyword phrases. Ajax call from app.js:
 ```
 $.ajax({
     url: "https://newsapi.org/v2/everything?language=en&q="
