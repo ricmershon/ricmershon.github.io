@@ -40,6 +40,13 @@ Got to https://rmersh65.github.io/news-headlines/.
 ## Wireframes
 Wireframe were created with Adobe XD. They can be found at [wireframes](https://xd.adobe.com/view/cc534d99-fba5-4fc9-525b-4cb79c5e129a-ba62/).
 
+## Notable Features
+
+1. Built with HTML, CSS, JavaScript and jQuery.
+2. Uses Ajax to make a request to an external database.
+3. Incorporates responsive design.
+4. Sticky menu and side bars.
+
 ## Layout Details and Approach
 I'm finally getting the hang of CSS--a little. I picked up a dotted Moleskine notebook (thank you Karolin Rafalski for the recommendation!) and started working the elements from the *inside out*. I found this to be EXTREMELY helpful, and would recommend this approach to anyone struggling with CSS and Flexbox. I ended up with pages and pages
 
