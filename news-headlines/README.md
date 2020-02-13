@@ -78,8 +78,8 @@ The application has a responsive design where display elements are stacked and f
 * [Adobe XD](https://www.adobe.com/products/xd.html?sdid=12B9F15S&mv=Search&ef_id=CjwKCAiAvonyBRB7EiwAadauqWmOixI61Qf9ss2N6uknIujAN22N8Qc4_AZqnOFY4PI0PFRsFicQCxoC30oQAvD_BwE:G:s&s_kwcid=AL!3085!3!315233774109!e!!g!!adobe%20xd) - Used for wireframing. It comes for free in an Adobe package for which I have a subscription. I found it to be very powerful, yet big, bulky and cumbersome. Unless I'm working on a huge project I will look for other tools.
 * [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - Allows responsive elements within a container to be automatically arranged depending upon screen size (or device).
 
-## Code
-The code has functions to perform these operations:
+## JavaScript
+The JavaScript has functions that use jQuery to perform these operations:
 * Create event listeners.
 * Get data.
 * Display data.
