@@ -57,6 +57,8 @@ const showStories = (stories) => {
 
 const getKeywordsData = (keyword) => {
 
+    console.log('getting keywords data');
+
     $.ajax({
         url: "https://newsapi.org/v2/everything?language=en&q=" + keyword + "&apiKey=4e7c32eeb3194593a08c378c61e9aedc"
     }).then(
@@ -114,6 +116,7 @@ $(() => {
         getHeadlinesData('us', $(event.currentTarget).attr('id'))
     })
     $('#submenu-button').click(() => {
+        console.log('clicked');
         event.preventDefault();
         getKeywordsData($('#submenu-keyword-box[type="text"]').val())
     })
