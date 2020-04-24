@@ -2,7 +2,7 @@
 namespace SendGrid;
 
 // If you are using Composer
-require __DIR__ . '/../../../vendor/autoload.php';
+require require 'vendor/autoload.php';
 // comment out the above line if not using Composer
 // require("./sendgrid-php.php");
 // If not using Composer, uncomment the above line
@@ -37,14 +37,14 @@ use SendGrid\Mail\ReplyTo;
 function helloEmail()
 {
     try {
-        $from = new From("test@example.com");
+        $from = new From("rmersh@ricmershon.com");
         $subject = "Hello World from the Twilio SendGrid PHP Library";
-        $to = new To("test@example.com");
+        $to = new To("rmersh@ricmershon.com");
         $content = new Content("text/plain", "some text here");
         $mail = new Mail($from, $to, $subject, $content);
 
         $personalization = new Personalization();
-        $personalization->addTo(new To(null, "test2@example.com"));
+        $personalization->addTo(new To(null, "rmersh@ricmershon.com"));
         $mail->addPersonalization($personalization);
 
         //echo json_encode($mail, JSON_PRETTY_PRINT), "\n";
@@ -58,19 +58,19 @@ function helloEmail()
 
 function kitchenSink()
 {
-    $from = new From("test@example.com", "Twilio SendGrid");
+    $from = new From("rmersh@ricmershon.com", "Twilio SendGrid");
     $subject = "Hello World from the Twilio SendGrid PHP Library";
-    $to = new To("test1@example.com", "Example User");
+    $to = new To("rmersh@ricmershon.com", "Example User");
     $content = new Content("text/plain", "some text here");
 
     $mail = new Mail($from, $to, $subject, $content);
 
     $personalization0 = new Personalization();
-    $personalization0->addTo(new To("test2@example.com", "Example User"));
-    $personalization0->addCc(new Cc("test3@example.com", "Example User"));
-    $personalization0->addCc(new Cc("test4@example.com", "Example User"));
-    $personalization0->addBcc(new Bcc("test5@example.com", "Example User"));
-    $personalization0->addBcc(new Bcc("test6@example.com", "Example User"));
+    $personalization0->addTo(new To("rmersh@ricmershon.com", "Example User"));
+    $personalization0->addCc(new Cc("rmersh@ricmershon.com", "Example User"));
+    $personalization0->addCc(new Cc("rmersh@ricmershon.com", "Example User"));
+    $personalization0->addBcc(new Bcc("rmersh@ricmershon.com", "Example User"));
+    $personalization0->addBcc(new Bcc("rmersh@ricmershon.com", "Example User"));
     $personalization0->setSubject(new Subject("Hello World from the Twilio SendGrid PHP Library"));
     $personalization0->addHeader(new Header("X-Test", "test"));
     $personalization0->addHeader(new Header("X-Mock", "true"));
@@ -83,12 +83,12 @@ function kitchenSink()
     $mail->addPersonalization($personalization0);
 
     $personalization1 = new Personalization();
-    $personalization1->addTo(new To("test7@example.com", "Example User"));
-    $personalization1->addTo(new To("test8@example.com", "Example User"));
-    $personalization1->addCc(new Cc("test9@example.com", "Example User"));
-    $personalization1->addCc(new Cc("test10@example.com", "Example User"));
-    $personalization1->addBcc(new Bcc("test11@example.com", "Example User"));
-    $personalization1->addBcc(new Bcc("test12@example.com", "Example User"));
+    $personalization1->addTo(new To("rmersh@ricmershon.com", "Example User"));
+    $personalization1->addTo(new To("rmersh@ricmershon.com", "Example User"));
+    $personalization1->addCc(new Cc("rmersh@ricmershon.com", "Example User"));
+    $personalization1->addCc(new Cc("rmersh@ricmershon.com", "Example User"));
+    $personalization1->addBcc(new Bcc("rmersh@ricmershon.com", "Example User"));
+    $personalization1->addBcc(new Bcc("rmersh@ricmershon.com", "Example User"));
     $personalization1->setSubject(new Subject("Hello World from the Twilio SendGrid PHP Library"));
     $personalization1->addHeader(new Header("X-Test", "test"));
     $personalization1->addHeader(new Header("X-Mock", "true"));
@@ -101,8 +101,8 @@ function kitchenSink()
     $mail->addPersonalization($personalization1);
 
     //Examples of adding personalization by specifying personalization indexes
-    $mail->addCc("test13@example.com", "Example User", null, 0);
-    $mail->addBcc("test14@example.com", "Example User", null, 1);
+    $mail->addCc("rmersh@ricmershon.com", "Example User", null, 0);
+    $mail->addBcc("rmersh@ricmershon.com", "Example User", null, 1);
 
     $content = new Content("text/html", "<html><body>some text here</body></html>");
     $mail->addContent($content);
@@ -152,7 +152,7 @@ function kitchenSink()
     $mail_settings = new MailSettings();
     $bcc_settings = new BccSettings();
     $bcc_settings->setEnable(true);
-    $bcc_settings->setEmail("test@example.com");
+    $bcc_settings->setEmail("rmersh@ricmershon.com");
     $mail_settings->setBccSettings($bcc_settings);
     $sandbox_mode = new SandBoxMode();
     $sandbox_mode->setEnable(true);
@@ -197,7 +197,7 @@ function kitchenSink()
     $tracking_settings->setGanalytics($ganalytics);
     $mail->setTrackingSettings($tracking_settings);
 
-    $reply_to = new ReplyTo("test@example.com", "Optional Name");
+    $reply_to = new ReplyTo("rmersh@ricmershon.com", "Optional Name");
     $mail->setReplyTo($reply_to);
 
     //echo json_encode($mail, JSON_PRETTY_PRINT), "\n";
