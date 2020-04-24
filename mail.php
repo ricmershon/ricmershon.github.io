@@ -1,8 +1,8 @@
 <?php
 namespace SendGrid;
 
-// If you are using Composer
-require require 'vendor/autoload.php';
+// If you are using Compose
+require 'vendor/autoload.php';
 // comment out the above line if not using Composer
 // require("./sendgrid-php.php");
 // If not using Composer, uncomment the above line
