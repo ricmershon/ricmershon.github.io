@@ -1,4 +1,5 @@
 <?php
+require 'vendor/autoload.php';
 $errors = '';
 $myemail = 'ric.mershon@gmail.com';//<-----Put Your email address here.
 if(empty($_POST['name'])  ||
