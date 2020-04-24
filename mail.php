@@ -1,33 +1,22 @@
 <?php
 require 'vendor/autoload.php';
-$errors = '';
-$myemail = 'ric.mershon@gmail.com';//<-----Put Your email address here.
-if(empty($_POST['name'])  ||
-   empty($_POST['email']) ||
-   empty($_POST['message']))
-{
-    $errors .= "\n Error: all fields are required";
-}
-$name = $_POST['name'];
-$email_address = $_POST['email'];
-// $phone= $_POST['phone'];
-$message = $_POST['message'];
-if (!preg_match(
-"/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",
-$email_address))
-{
-    $errors .= "\n Error: Invalid email address";
-}
-if( empty($errors))
-{
-	$to = $myemail;
-	$email_subject = "Contact form submission: $name";
-	$email_body = "You have received a new message. ".
-	" Here are the details:\n Name: $name \n Email: $email_address \n Message \n $message Phone \n ";
-	$headers = "From: $myemail\n";
-	$headers .= "Reply-To: $email_address";
-	mail($to,$email_subject,$email_body,$headers);
-	//redirect to the 'thank you' page
-	header('Location: https://ricmershon-portfolio.herokuapp.com');
+$email = new \SendGrid\Mail\Mail();
+$email->setFrom("ric.mershon@gmail.com", "Example User");
+$email->setSubject("Sending with SendGrid is Fun");
+$email->addTo("ric.mershon@gmail.com", "Example User");
+$email->addContent(
+    "text/plain", "and easy to do anywhere, even with PHP"
+);
+$email->addContent(
+    "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
+);
+$sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
+try {
+    $response = $sendgrid->send($email);
+    print $response->statusCode() . "\n";
+    print_r($response->headers());
+    print $response->body() . "\n";
+} catch (Exception $e) {
+    echo 'Caught exception: ',  $e->getMessage(), "\n";
 }
 ?>
