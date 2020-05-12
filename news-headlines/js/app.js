@@ -28,6 +28,8 @@ const showStories = (stories) => {
 
     // Build the individual stories.
 
+    console.log('stories');
+
     stories.forEach((story, i) => {
         const $story = $('<div>').addClass('story');
         const $headline = $('<div>').addClass('headline').text(story.title);
@@ -85,6 +87,8 @@ const getKeywordsData = (keyword) => {
  */
 
 const getHeadlinesData = (country, category) => {
+
+    console.log('getting headlines data');
 
     $.ajax({
         url: "https://newsapi.org/v2/top-headlines?country=" + country +  "&category=" + category + "&apiKey=4e7c32eeb3194593a08c378c61e9aedc"
