@@ -1,248 +1,296 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <!-- <link rel="stylesheet" href="https://bootswatch.com/4/sandstone/bootstrap.min.css"> -->
-        <!-- <link rel="stylesheet" href="main.css"> -->
-          <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script type="text/javascript" src='js/app.js'></script>
-        <title>Ric Mershon</title>
-    </head>
-    <body id="topOfPage">
-        <nav class="navbar px-5 border-none nav-scroll sticky-top navbar-expand-sm navbar-light bg-white shadow-sm">
-          <a class="navbar-brand" href="#">
-  <img src="/img/ricmershon-logo.jpg" width="70" height="70" class="" alt=""></a>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-          <!-- <a class="navbar-brand " href="#">Ric.</a> -->
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse w-100 order-3" id="navbarNavAltMarkup">
-            <ul class="navbar-nav ml-auto">
-              <a class="nav-item nav-link active" href="#topOfPage">HOME</a>
-              <a class="nav-item nav-link active" href="#about">ABOUT</a>
-              <a class="nav-item nav-link active" href="#portfolio">PORTFOLIO</a>
-              <a class="nav-item nav-link active" href="#resume">RESUME</a>
-              <a class="nav-item nav-link active" href="#publications">PUBLICATIONS</a>
-              <a class="nav-item nav-link active" href="#contact">CONTACT</a>
-            </ul>
-          </div>
-        </nav>
-        <div class="jumbotron mb-0 jumbotron-fluid bg-light">
-          <div class="container bg-light">
-            <p class="lead mb-n1 font-weight-lighter">Hello, I am</p>
-            <h2 class="display-4">RIC MERSHON</h2>
-            <p class="lead border-top border-bottom py-2">Full Stack Developer</p>
-            <a href="https://www.linkedin.com/in/ricmershon" target="_blank"><img class="mr-4" src="/img/linkedin-in.svg" height="17" widht="17"></a>
-            <a href="https://github.com/ricmershon" target="_blank"><img class="mr-4" src="/img/github.svg" height="17" widht="17"></a>
-            <a href="https://www.twitter.com/ricmershon" target="_blank"><img class="mr-4" src="/img/twitter.svg" height="17" widht="17"></a>
-            <a href="https://www.medium.com/@ricmershon" target="_blank"><img class="mr-4" src="/img/medium-m.svg" height="17" widht="17"></a>
-            <a href="https://www.facebook.com/ricmershon" target="_blank"><img class="mr-4" src="/img/facebook-f.svg" height="17" widht="17"></a>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script type="text/javascript" src='js/app.js'></script>
+    <title>Ric Mershon</title>
+  </head>
+  <body id="top-of-page">
 
-          </div>
-        </div>
-        <div id="about" class="jumbotron mx-auto mb-n5 jumbotron-fluid bg-white">
-          <div class="container bg-white">
-            <h2 class="text-center display-5 mx-auto my-n3 pb-1 border-bottom">About Me</h2>
-            <p class="mt-4 font-weight-light">I am a full stack engineer and photographer with a BS in Computer Science and an MBA. I have a very curious mind and great problem-solving skills, and enjoy finding creative and meaningful solutions for real-world problems. Passionate about great visual design, and clean, efficient code. Driven to work in a fast-paced, team-oriented environment, where I can help shape products around human experience, expression, and intuitive, efficient functionality.
-            </p>
-          </div>
-        </div>
-        <div id="portfolio" class="jumbotron mb-0 jumbotron-fluid bg-light">
-          <div class="container text-center bg-light">
-            <h2 class="display-5 my-n3 pb-1 border-bottom">Select Apps</h2>
-            <ul class="mt-4 list-group">
-              <a target="_blank" href="https://kibbutz-19-client.herokuapp.com/"><li class="list-group-item text-dark">Kibbutz-19</li></a>
-              <a target="_blank" href="https://perennial-portal.herokuapp.com//"><li class="list-group-item text-dark">Perennial Portal</li></a>
-              <a target="_blank" href="https://rmersh-express-mongo-example.herokuapp.com/"><li class="list-group-item text-dark">Caregiver's Network</li></a>
-              <a target="_blank" href="https://ricmershon.github.io/news-headlines/"><li class="list-group-item text-dark">News Headlines</li></a>
-            </ul>
-          </div>
-        </div>
+    <!-- NAVBAR -->
 
-        <!-- Resume section -->
-        <div id="resume" class="jumbotron mb-0  mb-n5 jumbotron-fluid bg-white">
-          <div class="container">
-            <h2 class="display-5 my-n3 pb-1 border-bottom text-center">My Resume</h2>
-            <p>
-              <a class="mt-4 btn btn-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                View my resume
-              </a>
+    <nav class="navbar px-5 border-none nav-scroll sticky-top navbar-expand-sm navbar-light bg-white shadow-sm">
+      <a class="navbar-brand" href="#">
+        <img src="/img/ricmershon-logo.jpg" width="70" height="70" class="" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse w-100 order-3" id="navbarNavAltMarkup">
+        <ul class="navbar-nav ml-auto">
+          <a class="nav-item nav-link active" href="#top-of-page">HOME</a>
+          <a class="nav-item nav-link active" href="#about">ABOUT</a>
+          <a class="nav-item nav-link active" href="#portfolio">PORTFOLIO</a>
+          <a class="nav-item nav-link active" href="#resume">RESUME</a>
+          <a class="nav-item nav-link active" href="#publications">PUBLICATIONS</a>
+          <a class="nav-item nav-link active" href="#contact">CONTACT</a>
+        </ul>
+      </div>
+    </nav>
 
-            </p>
+    <!-- INTRO section -->
 
-            <div class="collapse" id="collapseExample">
-              <h5>SKILLS</h5>
-              <div class="row pt-1">
-                  <div class="col-4"  >
-                      <div class="card font-weight-light border-white bg-white">
-                          <div class="card-body">
-                            <p class="mb-1 card-text">Node.js</p>
-                            <p class="mb-1 card-text">JavaScript</p>
-                            <p class="mb-1 card-text">HTML & CSS</p>
-                            <p class="mb-1 card-text">Git & GitHub</p>
-                            <p class="mb-1 card-text">Ruby on Rails</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-4"  >
-                      <div class="card font-weight-light border-white bg-white">
-                          <div class="card-body">
-                            <p class="mb-1 card-text">Express with Node.js</p>
-                            <p class="mb-1 card-text">MongoDB</p>
-                            <p class="mb-1 card-text">React</p>
-                            <p class="mb-1 card-text">GraphQL</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-4"  >
-                      <div class="card font-weight-light border-white bg-white">
-                          <div class="card-body">
-                            <p class="mb-1 card-text">AJAX</p>
-                            <p class="mb-1 card-text">Project Management</p>
-                            <p class="mb-1 card-text">Cross-Functional Collaboration</p>
-                            <p class="mb-1 card-text">Strategic Planning</p>
-                          </div>
-                      </div>
-                  </div>
+    <div class="jumbotron mb-0 jumbotron-fluid bg-light">
+      <div class="container bg-light">
+        <p class="lead mb-n1 font-weight-lighter">Hello, I am</p>
+        <h2 class="display-4">RIC MERSHON</h2>
+        <p class="lead border-top border-bottom py-2">Full Stack Developer</p>
+        <a href="https://www.linkedin.com/in/ricmershon" target="_blank"><img class="mr-4" src="/img/linkedin-in.svg" height="17" widht="17"></a>
+        <a href="https://github.com/ricmershon" target="_blank"><img class="mr-4" src="/img/github.svg" height="17" widht="17"></a>
+        <a href="https://www.twitter.com/ricmershon" target="_blank"><img class="mr-4" src="/img/twitter.svg" height="17" widht="17"></a>
+        <a href="https://www.medium.com/@ricmershon" target="_blank"><img class="mr-4" src="/img/medium-m.svg" height="17" widht="17"></a>
+        <a href="https://www.facebook.com/ricmershon" target="_blank"><img class="mr-4" src="/img/facebook-f.svg" height="17" widht="17"></a>
+      </div>
+    </div>
+
+    <!-- ABOUT ME section -->
+
+    <div id="about" class="jumbotron mx-auto mb-n5 jumbotron-fluid bg-white">
+      <div class="container bg-white">
+        <h2 class="text-center display-5 mx-auto my-n3 pb-1 border-bottom">About Me</h2>
+        <p class="mt-4 font-weight-light">
+          I am a full stack engineer and photographer with a BS in Computer Science and an MBA. I have a very curious mind and great problem-solving skills, and enjoy finding creative and meaningful solutions for real-world problems. Passionate about great visual design, and clean, efficient code. Driven to work in a fast-paced, team-oriented environment, where I can help shape products around human experience, expression, and intuitive, efficient functionality.
+        </p>
+      </div>
+    </div>
+
+    <!-- SELECT APPS/portfolio section -->
+
+    <div id="portfolio" class="jumbotron mb-0 jumbotron-fluid bg-light">
+      <div class="container text-center bg-light">
+        <h2 class="display-5 my-n3 pb-1 border-bottom">Select Apps</h2>
+        <ul class="mt-4 list-group">
+          <a target="_blank" href="https://kibbutz-19-client.herokuapp.com/"><li class="list-group-item text-dark">Kibbutz-19</li></a>
+          <a target="_blank" href="https://perennial-portal.herokuapp.com//"><li class="list-group-item text-dark">Perennial Portal</li></a>
+          <a target="_blank" href="https://rmersh-express-mongo-example.herokuapp.com/"><li class="list-group-item text-dark">Caregiver's Network</li></a>
+          <a target="_blank" href="https://ricmershon.github.io/news-headlines/"><li class="list-group-item text-dark">News Headlines</li></a>
+        </ul>
+      </div>
+    </div>
+
+    <!-- RESUME section -->
+
+    <div id="resume" class="jumbotron mb-0  mb-n5 jumbotron-fluid bg-white">
+      <div class="container">
+        <h2 class="display-5 my-n3 pb-1 border-bottom text-center">My Resume</h2>
+        <p>
+          <a class="mt-4 btn btn-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            View my resume
+          </a>
+        </p>
+
+        <!-- Collapsible section -->
+
+        <div class="collapse" id="collapseExample">
+
+          <!-- Skills section in three columns -->
+
+          <h5>SKILLS</h5>
+          <div class="row pt-1 font-weight-light">
+
+            <!-- Column 1 -->
+
+            <div class="col-4"  >
+              <div class="card border-white bg-white">
+                <div class="card-body">
+                  <p class="mb-1 card-text">Node.js</p>
+                  <p class="mb-1 card-text">JavaScript</p>
+                  <p class="mb-1 card-text">HTML & CSS</p>
+                  <p class="mb-1 card-text">Git & GitHub</p>
+                  <p class="mb-1 card-text">Ruby on Rails</p>
+                </div>
               </div>
+            </div>
 
-              <h5>PROFESSONAL EXPERERIENCE</h5>
-              <p>SOFTWARE ENGINEERING IMMERSIVE STUDENT</p>
-              <p>General Assembly | Jan 2020 - Apr 2020</p>
-              <ul>
-                <li class="font-weight-light">
-                  Three-month intensive, 500-hour full-time, full-stack program, providing experience with the latest front- and back-end programming languages, tools, and methodologies.
-                </li>
-                <li class="font-weight-light">
-                  Gained hands-on experience with JavaScript, JQuery, Node.js, Express.js, MongoDB, AJAX, React, Ruby on Rails, Git, Data Structures, SQL, Algorithms, and Computer Science Principles through team/individual projects, code reviews, and peer programming.
-                </li>
-              </ul>
-              <p>FOUNDER, CEO, PHOTOGRAPHER</p>
-              <p>Ric Mershon Photography | 2002 - Present</p>
-              <ul>
-                <li class="font-weight-light">
-                  Developed and executed the initial business plan, all financial forecasts and marketing strategies for the introduction of this new business.
-                </li>
-                <li class="font-weight-light">
-                  Generated $180k in revenue within three years. Subsequently, delivered on average 5-10% year-over-year growth.
-                </li>
-                <li class="font-weight-light">
-                  Cultivated strategic partnerships with third-party businesses to expand market exposure and drive revenue growth.
-                </li>
-              </ul>
-              <p>SALES CONSULTANT</p>
-              <p>AT&T, Inc. | 2016 - 2018</p>
-              <ul>
-                <li class="font-weight-light">
-                  Applied strong consultative selling skills and product knowledge to assess client needs and provide customized product and service solutions.
-                </li>
-                <li class="font-weight-light">
-                  Worked with individuals and small businesses to address their communication and entertainment needs.
-                </li>
-                <li class="font-weight-light">
-                  Played a key role on the sales team that is consistently ranked in the region’s top 10%.
-                </li>
-              </ul>
-              <h5>EDUCATION</h5>
-              <p>SOFTWARE ENGINEERING IMMERSIVE PROGRAM</p>
-              <p>General Assembly</p>
-              <p>MBA, MARKETING CONCENTRATION</p>
-              <p>Babson College Graduate School of Business, Wellesley, MA</p>
-              <p>BS, COMPUTER SCIENCE</p>
-              <p>Northeastern University, Boston, MA</p>
+            <!-- Column 2 -->
+
+            <div class="col-4"  >
+              <div class="card border-white bg-white">
+                <div class="card-body">
+                  <p class="mb-1 card-text">Express with Node.js</p>
+                  <p class="mb-1 card-text">MongoDB</p>
+                  <p class="mb-1 card-text">React</p>
+                  <p class="mb-1 card-text">GraphQL</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 3 -->
+
+            <div class="col-4"  >
+              <div class="card border-white bg-white">
+                <div class="card-body">
+                  <p class="mb-1 card-text">AJAX</p>
+                  <p class="mb-1 card-text">Project Management</p>
+                  <p class="mb-1 card-text">Cross-Functional Collaboration</p>
+                  <p class="mb-1 card-text">Strategic Planning</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professional Experience section -->
+
+          <h5>PROFESSONAL EXPERERIENCE</h5>
+
+          <p>SOFTWARE ENGINEERING IMMERSIVE FELLOW</p>
+          <p>General Assembly | Jan 2020 - Apr 2020</p>
+          <ul class="font-weight-light">
+            <li>
+              Three-month intensive, 500-hour full-time, full-stack program, providing experience with the latest front- and back-end programming languages, tools, and methodologies.
+            </li>
+            <li>
+              Gained hands-on experience with JavaScript, JQuery, Node.js, Express.js, MongoDB, AJAX, React, Ruby on Rails, Git, Data Structures, SQL, Algorithms, and Computer Science Principles through team/individual projects, code reviews, and peer programming.
+            </li>
+          </ul>
+
+          <p>FOUNDER, CEO, PHOTOGRAPHER</p>
+          <p>Ric Mershon Photography | 2002 - Present</p>
+          <ul class="font-weight-light">
+            <li>
+              Developed and executed the initial business plan, all financial forecasts and marketing strategies for the introduction of this new business.
+            </li>
+            <li>
+              Generated $180k in revenue within three years. Subsequently, delivered on average 5-10% year-over-year growth.
+            </li>
+            <li>
+              Cultivated strategic partnerships with third-party businesses to expand market exposure and drive revenue growth.
+            </li>
+          </ul>
+
+          <p>SALES CONSULTANT</p>
+          <p>AT&T, Inc. | 2016 - 2018</p>
+          <ul class="font-weight-light">
+            <li>
+              Applied strong consultative selling skills and product knowledge to assess client needs and provide customized product and service solutions.
+            </li>
+            <li>
+              Worked with individuals and small businesses to address their communication and entertainment needs.
+            </li>
+            <li>
+              Played a key role on the sales team that is consistently ranked in the region’s top 10%.
+            </li>
+          </ul>
+
+          <!-- Education section -->
+
+          <h5>EDUCATION</h5>
+              <p class="mb-1">SOFTWARE ENGINEERING IMMERSIVE PROGRAM</p>
+              <p class="font-weight-light">General Assembly</p>
+              <p class="mb-1">MBA, MARKETING CONCENTRATION</p>
+              <p class="font-weight-light">Babson College Graduate School of Business, Wellesley, MA</p>
+              <p class="mb-1">BS, COMPUTER SCIENCE</p>
+              <p class="font-weight-light">Northeastern University, Boston, MA</p>
             </div>
           </div>
         </div>
 
-        <!-- publications section -->
-        <div id="publications" class="jumbotron mb-0  mb-n5 jumbotron-fluid bg-light">
-          <div class="container text-center">
-            <h2 class="display-5 my-n3 pb-1 border-bottom">My Publications</h2>
-            <ul class="mt-4 list-group">
-              <a target="_blank" href="https://www.linkedin.com/pulse/software-engineer-back-again-ric-mershon-mba/"><li class="list-group-item text-dark">The Software Engineer</li></a>
-            </ul>
-          </div>
-        </div>
+        <!-- Publications section -->
 
-<!-- Contact form section -->
+    <!-- PUBLICATIONS section -->
 
-        <div id="contact" class="jumbotron mb-0 jumbotron-fluid bg-white">
-          <div class="container ">
-            <h2 class="display-5 mt-n3 pb-1 border-bottom">Contact Me</h2>
-            <form action="https://progressandfortune.com/assets/ric-contact.php" method="POST">
-                <div class="form-row mb-3">
-                    <div class="col">
-                        <input id="name" type="text" class="form-control" name="name" placeholder="Your Name">
-                    </div>
-                  </div>
-                <div class="form-row mb-3">
-                    <div class="col">
-                        <input id="email" type="text" class="form-control" name="email" placeholder="Email">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" type="textarea" rows="4" class="form-control description" name="message" placeholder="Message"></textarea>
-                </div>
+    <div id="publications" class="jumbotron mb-0  mb-n5 jumbotron-fluid bg-light">
+      <div class="container text-center">
+        <h2 class="display-5 my-n3 pb-1 border-bottom">My Publications</h2>
+        <ul class="mt-4 list-group">
+          <a target="_blank" href="https://www.linkedin.com/pulse/software-engineer-back-again-ric-mershon-mba/"><li class="list-group-item text-dark">The Software Engineer</li></a>
+        </ul>
+      </div>
+    </div>
 
-                <button id="send-message-button" type="submit" class="btn btn-secondary secondary-theme btn-outline-light">Send Message</button>
-            </form>
-          </div>
-        </div>
+    <!-- CONTACT ME form section -->
 
-<!-- Contact section -->
-
-        <div class="jumbotron mb-0 px-5 py-4 jumbotron-fluid bg-light border-top">
-            <div class="row">
-                <div class="col-4"  >
-                    <div class="card text-center font-weight-light border-light bg-light">
-
-                        <div class="card-body">
-                          <svg class="bi bi-phone mb-2" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M11 1H5a1 1 0 00-1 1v12a1 1 0 001 1h6a1 1 0 001-1V2a1 1 0 00-1-1zM5 0a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V2a2 2 0 00-2-2H5z" clip-rule="evenodd"/>
-                            <path fill-rule="evenodd" d="M8 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
-                          </svg>
-
-                            <h5 class="font-weight-light">Phone</h5>
-                            <p class="card-text font-weight-lighter">678.640.6926</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4"  >
-                    <div class="card text-center border-light bg-light">
-
-                        <div class="card-body">
-                          <svg class="bi bi-geo-alt mb-2" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M8 16s6-5.686 6-10A6 6 0 002 6c0 4.314 6 10 6 10zm0-7a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
-                          </svg>
-                            <h5 class="font-weight-light">Address</h5>
-                            <p class="card-text font-weight-lighter">Alpharetta, GA</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4"  >
-                    <div class="card text-center border-light bg-light">
-
-                        <div class="card-body">
-                          <svg class="bi bi-envelope-open mb-2" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M.243 6.929l.514-.858L8 10.417l7.243-4.346.514.858L8 11.583.243 6.93z" clip-rule="evenodd"/>
-                    <path fill-rule="evenodd" d="M7.184 10.68L.752 14.432l-.504-.864L6.68 9.816l.504.864zm1.632 0l6.432 3.752.504-.864L9.32 9.816l-.504.864z" clip-rule="evenodd"/>
-                    <path fill-rule="evenodd" d="M8.47 1.318a1 1 0 00-.94 0l-6 3.2A1 1 0 001 5.4V14a1 1 0 001 1h12a1 1 0 001-1V5.4a1 1 0 00-.53-.882l-6-3.2zM7.06.435a2 2 0 011.882 0l6 3.2A2 2 0 0116 5.4V14a2 2 0 01-2 2H2a2 2 0 01-2-2V5.4a2 2 0 011.059-1.765l6-3.2z" clip-rule="evenodd"/>
-                  </svg>
-
-                            <h5 class="font-weight-light">Email</h5>
-                            <a href="mailto:rmersh@ricmershon.com">
-                            <p class="card-text font-weight-lighter text-dark">rmersh@ricmershon.com</p></a>
-                        </div>
-                    </div>
-                </div>
+    <div id="contact" class="jumbotron mb-0 jumbotron-fluid bg-white">
+      <div class="container ">
+        <h2 class="display-5 mt-n3 pb-1 border-bottom">Contact Me</h2>
+        <form action="https://progressandfortune.com/assets/ric-contact.php" method="POST">
+          <div class="form-row mb-3">
+            <div class="col">
+              <input id="name" type="text" class="form-control" name="name" placeholder="Your Name">
             </div>
+          </div>
+          <div class="form-row mb-3">
+            <div class="col">
+              <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea id="message" type="textarea" rows="4" class="form-control description" name="message" placeholder="Message"></textarea>
+          </div>
+
+          <button id="send-message-button" type="submit" class="btn btn-secondary secondary-theme btn-outline-light">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- CONTACT info section -->
+
+    <div class="jumbotron mb-0 px-5 py-4 jumbotron-fluid bg-light border-top">
+      <div class="row">
+
+        <!-- Phone card -->
+
+        <div class="col-4"  >
+          <div class="card text-center font-weight-light border-light bg-light">
+            <div class="card-body">
+              <svg class="bi bi-phone mb-2" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M11 1H5a1 1 0 00-1 1v12a1 1 0 001 1h6a1 1 0 001-1V2a1 1 0 00-1-1zM5 0a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V2a2 2 0 00-2-2H5z" clip-rule="evenodd"/>
+                <path fill-rule="evenodd" d="M8 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+              </svg>
+              <h5 class="font-weight-light">Phone</h5>
+              <p class="card-text font-weight-lighter">678.640.6926</p>
+            </div>
+          </div>
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!-- Address card -->
 
-    </body>
+        <div class="col-4"  >
+          <div class="card text-center border-light bg-light">
+            <div class="card-body">
+              <svg class="bi bi-geo-alt mb-2" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 16s6-5.686 6-10A6 6 0 002 6c0 4.314 6 10 6 10zm0-7a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+              </svg>
+              <h5 class="font-weight-light">Address</h5>
+              <p class="card-text font-weight-lighter">Alpharetta, GA</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email card -->
+
+        <div class="col-4"  >
+          <div class="card text-center border-light bg-light">
+
+            <div class="card-body">
+              <svg class="bi bi-envelope-open mb-2" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M.243 6.929l.514-.858L8 10.417l7.243-4.346.514.858L8 11.583.243 6.93z" clip-rule="evenodd"/>
+                <path fill-rule="evenodd" d="M7.184 10.68L.752 14.432l-.504-.864L6.68 9.816l.504.864zm1.632 0l6.432 3.752.504-.864L9.32 9.816l-.504.864z" clip-rule="evenodd"/>
+                <path fill-rule="evenodd" d="M8.47 1.318a1 1 0 00-.94 0l-6 3.2A1 1 0 001 5.4V14a1 1 0 001 1h12a1 1 0 001-1V5.4a1 1 0 00-.53-.882l-6-3.2zM7.06.435a2 2 0 011.882 0l6 3.2A2 2 0 0116 5.4V14a2 2 0 01-2 2H2a2 2 0 01-2-2V5.4a2 2 0 011.059-1.765l6-3.2z" clip-rule="evenodd"/>
+              </svg>
+              <h5 class="font-weight-light">Email</h5>
+              <a href="mailto:rmersh@ricmershon.com">
+                <p class="card-text font-weight-lighter text-dark">rmersh@ricmershon.com</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      <!-- End Row -->
+      </div>
+
+    <!-- End CONTACT section -->
+
+    </div>
+
+    <!-- Script libraries -->
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  </body>
 </html>
