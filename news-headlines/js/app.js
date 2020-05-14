@@ -24,6 +24,7 @@ const showStories = (stories) => {
     // of stories.
 
     const $storyContainer = $('#story-container');
+    console.log('Story container', $storyContainer);
     $storyContainer.empty();
 
     // Build the individual stories.
