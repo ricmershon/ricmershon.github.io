@@ -162,10 +162,21 @@ const buildModal = (index) => {
 }
 
 $(() => {
+
+  // Modal handler for app specs.
+
   $('#appModal').on('show.bs.modal',
     function (event) {
       let appInfoIndex = parseInt($(event.relatedTarget).data('app'))
       buildModal(appInfoIndex)
     }
   )
+
+  // Handler to toggle resume button text.
+
+  $('#resume-button').click(() => {
+    const prevText = $('#resume-button').text().trim()
+    const newText = prevText === "View my resume" ? "Collapse" : "View my resume"
+    $('#resume-button').text(newText)
+  })
 })
