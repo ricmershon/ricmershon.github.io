@@ -1,3 +1,22 @@
+/*
+ ===============================================================================
+ ===============================================================================
+ =
+ = Ric Mershon Developer Portfolio
+ = Created: April 2020
+ = Created by: Ric Mershon
+ =
+ ===============================================================================
+ ===============================================================================
+ */
+
+/*
+ ===============================================================================
+ = appInfo contains information about applications for dynamically building
+ = modal boxes
+ ===============================================================================
+ */
+
 const appInfo = [
   {
     app: "Kibbutz-19",
@@ -109,6 +128,13 @@ const appInfo = [
   }
 ]
 
+/*
+ ===============================================================================
+ = buildModal() builds and displays a modal box for a specific app based on
+ = the "Tech Specs" button that's clicked by the user
+ ===============================================================================
+ */
+
 const buildModal = (index) => {
 
   // Create high level elements contained within modal content div.
@@ -120,7 +146,7 @@ const buildModal = (index) => {
 
   $content.append($header).append($body).append($footer)
 
-  // Heade contains a title and 'close' button.
+  // Header contains a title and 'close' button.
 
   const $title = $('<h5>').addClass('modal-title').text(`${appInfo[index].app} Tech Specs`);
   const $closeButton = $('<button>')
@@ -161,9 +187,17 @@ const buildModal = (index) => {
   $footer.append($footerButton)
 }
 
+/*
+ ===============================================================================
+ = On-load function creates the handlers for the app modal and the view
+ = button.
+ ===============================================================================
+ */
+
+
 $(() => {
 
-  // Modal handler for app specs.
+  // Handler for app specs modal.
 
   $('#appModal').on('show.bs.modal',
     function (event) {
@@ -175,8 +209,14 @@ $(() => {
   // Handler to toggle resume button text.
 
   $('#resume-button').click(() => {
-    const prevText = $('#resume-button').text().trim()
-    const newText = prevText === "View my resume" ? "Collapse" : "View my resume"
+
+    // current button text.
+
+    const currText = $('#resume-button').text().trim()
+
+    // Toggle text and display new text.
+
+    const newText = currText === "Open my resume" ? "Close" : "Open my resume"
     $('#resume-button').text(newText)
   })
 })
