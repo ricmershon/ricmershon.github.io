@@ -11,4 +11,7 @@ Create a portfolio site that not only showcases my work, but also showcases a co
 
 ### A Variety of HTML Element
 More advanced elements used:
-* Modal box to display tech specs for individual apps. The same modal box is used for each app with using ```event.relatedTarget``` and HTML ```data-*``` attributes.
+* Modal box to display tech specs for individual apps. The same modal box is used for each app using ```event.relatedTarget``` and HTML ```data-*``` attributes to determine data to be displayed.
+* Collapsible section for resume.
+* Carousel component for publications.
+* Contact form using a PHP backend.
